@@ -1,0 +1,43 @@
+{% assign languages = site.languages | sort: "name" %}
+{% comment %} page-language.html sets page_lang and page_suffix; links below keep
+the reader on the same page when switching languages — every language has the
+same four pages. {% endcomment %}
+{% include page-language.html %}
+<div class="language-selector">
+  <button class="language-button" onclick="toggleLanguageMenu()">
+    {% for lang in languages %}
+      {% if lang.code == page_lang %}
+        {{ lang.name }}
+      {% endif %}
+    {% endfor %}
+    <span class="caret">▼</span>
+  </button>
+  <div id="languageMenu" class="language-menu">
+    {% for lang in languages %}
+      {% if lang.code == 'en' %}
+        <a href="{% if page_suffix == '' %}/{% else %}{{ page_suffix }}{% endif %}" {% if page_lang == 'en' %}class="active"{% endif %}>{{ lang.name }}</a>
+      {% else %}
+        <a href="/{{ lang.code }}{% if page_suffix == '' %}/{% else %}{{ page_suffix }}{% endif %}" {% if page_lang == lang.code %}class="active"{% endif %}>{{ lang.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+function toggleLanguageMenu() {
+  document.getElementById('languageMenu').classList.toggle('show');
+}
+
+// Close the dropdown if clicked outside
+window.onclick = function(event) {
+  if (!event.target.matches('.language-button')) {
+    var dropdowns = document.getElementsByClassName('language-menu');
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

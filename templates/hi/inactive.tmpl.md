@@ -1,0 +1,25 @@
+# निष्क्रिय स्ट्रीमर्स
+
+Hey there! This page contains streamers that have not streamed in the last month.
+
+## निष्क्रिय स्ट्रीम्स की सूची
+
+| <i class="fas fa-headset"></i> | <i class="fas fa-external-link-alt"></i> |
+| --: | --- |
+
+### क्रेडिट्स
+
+यह प्रोजेक्ट एक सामुदायिक प्रयास है लेकिन [GoProSlowYo](https://twitch.tv/goproslowyo) वर्तमान में [secinfo](https://github.com/infosecstreams-mirror/secinfo), [streamstatus](https://github.com/infosecstreams-mirror/streamstatus), और [इस](https://github.com/infosecstreams-mirror/infosecstreams-mirror.github.io) रेपो में सभी golang कोड को बनाए रखता है।
+
+मूल [hacklist](https://docs.google.com/spreadsheets/d/e/2PACX-1vR_YY0A7i8-E0mRXJmCZTxARcZPm77dAV7funlMadAK2SliG0sWfdRUMlQ3DQux7WfqKD_JuVa-1I73/pubhtml) को शुरू करने और बनाए रखने के लिए [chadb_n00b](https://twitch.tv/chadb_n00b) को विशेष धन्यवाद!
+
+### Contribute or Report an Issue
+
+Having trouble with a link? Site not updating properly? Questions? Contributions? Something else? Please read the [FAQ](/hi/faq)!
+
+<script src="https://infosecstreams.com/js/sort.js" async="" defer=""></script>
+
+
+
+
+<script src="/js/vendor/fontawesome.all.min.js"></script>

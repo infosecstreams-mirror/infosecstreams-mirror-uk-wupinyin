@@ -1,0 +1,177 @@
+{% include language-selector.html %}
+
+<!-- Enhanced SEO Meta Tags -->
+<meta name="description" content="Live Cybersecurity Streams, Ethical Hacking Tutorials, CTF Challenges, TryHackMe & HTB Walkthroughs, Red Team & Blue Team Training">
+
+<!-- Primary Keywords -->
+<meta name="keywords" content="cybersecurity streams, ethical hacking live, TryHackMe streams, HTB walkthroughs, red team training, blue team training, CTF challenges live, penetration testing tutorials, security tool demonstrations, malware analysis live, bug bounty streams, exploit development, security research, incident response training, digital forensics streams">
+
+<!-- HREFLang Tags: each language's version of THIS page, not the home page -->
+{% include page-language.html %}
+{% capture lang_suffix %}{% if page_suffix == '' %}/{% else %}{{ page_suffix }}{% endif %}{% endcapture %}
+<link rel="alternate" href="https://infosecstreams.com{{ lang_suffix }}" hreflang="x-default" />
+<link rel="alternate" href="https://infosecstreams.com{{ lang_suffix }}" hreflang="en" />
+{% for lang in site.languages %}{% unless lang.code == 'en' %}<link rel="alternate" href="https://infosecstreams.com/{{ lang.code }}{{ lang_suffix }}" hreflang="{{ lang.code }}" />
+{% endunless %}{% endfor %}
+<!-- Document language (and direction for Arabic) — the theme's layout hardcodes lang="en-US" -->
+{% if page_lang != 'en' %}
+<script>
+  document.documentElement.lang = '{{ page_lang }}';
+  {% if page_lang == 'ar' %}document.documentElement.dir = 'rtl';{% endif %}
+</script>
+{% endif %}
+
+<!-- Language-specific Keywords -->
+<!-- Turkish -->
+<meta name="keywords" lang="tr" content="siber güvenlik yayınları, etik hacking canlı, TryHackMe eğitimleri, HTB yayınları, kırmızı takım eğitimi, mavi takım eğitimi, CTF yarışmaları, sızma testi dersleri, güvenlik araçları gösterimi, zararlı yazılım analizi">
+
+<!-- German -->
+<meta name="keywords" lang="de" content="cybersecurity-streams, ethisches hacking live, TryHackMe tutorials, HTB streams, red team training, blue team training, CTF herausforderungen, penetrationstests, sicherheitstools demos, malware-analyse">
+
+<!-- Italian -->
+<meta name="keywords" lang="it" content="stream cybersecurity, hacking etico dal vivo, tutorial TryHackMe, stream HTB, formazione red team, formazione blue team, sfide CTF, tutorial di penetration testing, dimostrazioni strumenti di sicurezza, analisi malware">
+
+<!-- Portuguese -->
+<meta name="keywords" lang="pt" content="streams de cibersegurança, hacking ético ao vivo, tutoriais TryHackMe, streams HTB, treinamento de equipe vermelha, treinamento de equipe azul, desafios CTF, tutoriais de pentest, demonstrações de ferramentas de segurança, análise de malware">
+
+<!-- English -->
+<meta name="keywords" lang="en" content="cybersecurity streams, ethical hacking live, TryHackMe walkthroughs, HTB streams, red teaming live, blue team training, CTF challenges, penetration testing tutorials, security tools demos, malware analysis, bug bounty hunting, exploit development streams, security research live, incident response training, digital forensics">
+
+<!-- Mandarin Chinese -->
+<meta name="keywords" lang="zh" content="网络安全直播, 道德黑客教程, TryHackMe演练, HTB实况, 红队训练, 蓝队训练, CTF挑战赛直播, 渗透测试教程, 安全工具演示, 恶意软件分析, 漏洞赏金直播, 漏洞开发, 安全研究, 事件响应培训, 数字取证">
+
+<!-- Hindi -->
+<meta name="keywords" lang="hi" content="साइबर सुरक्षा स्ट्रीम्स, एथिकल हैकिंग लाइव, TryHackMe वॉकथ्रू, HTB स्ट्रीम्स, रेड टीम ट्रेनिंग, ब्लू टीम ट्रेनिंग, CTF चैलेंज, पेनेट्रेशन टेस्टिंग ट्यूटोरियल, सुरक्षा टूल डेमो, मालवेयर एनालिसिस, बग बाउंटी स्ट्रीम्स">
+
+<!-- Spanish -->
+<meta name="keywords" lang="es" content="streams de ciberseguridad, hacking ético en vivo, tutoriales de TryHackMe, streams de HTB, entrenamiento de equipo rojo, entrenamiento de equipo azul, desafíos CTF, tutoriales de pentesting, demostraciones de herramientas de seguridad, análisis de malware">
+
+<!-- French -->
+<meta name="keywords" lang="fr" content="streams de cybersécurité, hacking éthique en direct, tutoriels TryHackMe, streams HTB, formation red team, formation blue team, défis CTF, tutoriels de pentest, démonstrations d'outils de sécurité, analyse de malware">
+
+<!-- Arabic -->
+<meta name="keywords" lang="ar" content="بث الأمن السيبراني, الاختراق الأخلاقي المباشر, دروس TryHackMe, بث HTB, تدريب الفريق الأحمر, تدريب الفريق الأزرق, تحديات CTF, دروس اختبار الاختراق, عروض أدوات الأمان, تحليل البرامج الضارة">
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="InfoSec Streams - Live Cybersecurity & Ethical Hacking Streams" />
+<meta property="og:description" content="Watch live cybersecurity streams, ethical hacking tutorials, CTF challenges, TryHackMe & HTB walkthroughs, red team training, and more." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://infosecstreams.com" />
+<meta property="og:site_name" content="InfoSec Streams" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="InfoSec Streams - Live Cybersecurity & Ethical Hacking" />
+<meta name="twitter:description" content="Watch live cybersecurity streams, ethical hacking tutorials, CTF challenges, TryHackMe & HTB walkthroughs, red team training, and more." />
+
+<!-- Enhanced Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "InfoSec Streams",
+  "url": "https://infosecstreams.com",
+  "description": "Live cybersecurity streams, ethical hacking tutorials, CTF challenges, and security training",
+  "inLanguage": ["tr", "de", "it", "pt", "en", "zh", "hi", "es", "fr", "ar"],
+  "about": {
+    "@type": "Thing",
+    "name": "Cybersecurity Streaming",
+    "description": "Live streaming content featuring ethical hacking, penetration testing, CTF challenges, security tools, and cybersecurity training"
+  },
+  "keywords": "cybersecurity streams, ethical hacking live, TryHackMe walkthroughs, HTB streams, red team training, blue team training, CTF challenges, penetration testing tutorials, security tools demos, malware analysis"
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What is InfoSec Streams?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>InfoSec Streams is an actively community-maintained list of Information Security-related Twitch streams. The list is hosted on GitHub pages and includes a wide range of streamers who contribute content around cybersecurity topics.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How is the list sorted?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>The list is sorted based on 30-day activity, which helps users find active streams more easily.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What happens to inactive streamers?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>Streamers that haven't streamed in the last month are moved to the inactive streamers page. This ensures that the main list remains up-to-date with active content creators.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Can I access the list of inactive streamers?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>Yes, there is a separate page for streamers who have been inactive for the last month. You can access this list from the main GitHub page.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Is the list of streamers exhaustive?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>While the list includes a wide range of streamers, it is by no means exhaustive. The cybersecurity field is dynamic and new content creators are always emerging. The InfoSec Streams list aims to be as comprehensive as possible and relies on contributions from the community to stay up-to-date.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How can I contribute to the list?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>If you have a new streamer to add or spot an error, you're encouraged to contribute edits and can be made by issuing a <a href=https://github.com/infosecstreams-mirror/infosecstreams-mirror.github.io/pulls>pull request</a>, raising an <a href=https://github.com/infosecstreams-mirror/infosecstreams-mirror.github.io/issues>issue</a>. Thanks!</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Who maintains the InfoSec Streams list?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>The project was started by <a href=https://twitch.tv/chadb_n00b>chadb_n00b</a> and is currently maintained by GoProSlowYo. <a href=https://github.com/goproslowyo>GoProSlowYo</a> currently maintains all the golang code in <a href=https://github.com/infosecstreams-mirror/secinfo>secinfo</a>, <a href=https://github.com/infosecstreams-mirror/streamstatus>streamstatus</a>, and <a href=https://github.com/infosecstreams-mirror/infosecstreams-mirror.github.io>this</a> repository.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Can I join the n00bsec CTF Team and its thriving Discord community?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>Absolutely! The n00bsec CTF Team has a vibrant and active community, OSINT it. Joining the community to engage in discussions, share knowledge, and participate with the n00bsec CTF Team and their activities. The Discord server is an excellent platform to connect with like-minded individuals passionate about CTF challenges and information security.</p>"
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Where can I report issues?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"<p>If you encounter any issues with a link or if the site is not updating properly, you can report it on the server (OSINT it) or open an issue on the GitHub page.</p>"
+            }
+          }
+        ]
+    }
+</script>
+
+<!-- Open external links in a new tab -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      if (link.hostname && link.hostname !== window.location.hostname) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      }
+    });
+  });
+</script>
